@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Components'),
+        elevation: 2,
       ),
       body: _list(),
     );
