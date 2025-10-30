@@ -5,6 +5,7 @@ import 'package:samu_app1/screens/animated_container.dart';
 import 'package:samu_app1/screens/avatar_page.dart';
 import 'package:samu_app1/screens/card_page.dart';
 import 'package:samu_app1/screens/home_page.dart';
+import 'package:samu_app1/screens/listview_page.dart';
 import 'package:samu_app1/screens/slider_page.dart';
 
 Map<String, WidgetBuilder> getRoutes(){
@@ -18,4 +19,5 @@ final rutes = <String, WidgetBuilder>{
        'animatedContainer': (BuildContext context) => AnimatedContainerPage(),
        'inputs'    : (BuildContext context) => InputsPage(),
        'slider'    : (BuildContext context) => SliderPage(),
+       'list'      : (BuildContext context) => ListaPage()
      };
