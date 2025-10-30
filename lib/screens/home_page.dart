@@ -28,20 +28,22 @@ Widget _list() {
       print('builder');
       print(snapshot.data);
       return ListView(
-        children: _elementsList(snapshot.data),
+        children: _elementsList(snapshot.data, context),
       );
     },
   );
 }
 
-List<Widget> _elementsList(List<dynamic>? data) {
+List<Widget> _elementsList(List<dynamic>? data, BuildContext context) {
   final List<Widget> elements =  [];
   data?.forEach((element){
     final widgetTemp = ListTile(
       title: Text(element['texte']),
       leading: getIcon(element['icona']),
       trailing: Icon(Icons.keyboard_arrow_right, color: Colors.blue,),
-      onTap: (){},
+      onTap: (){
+        Navigator.pushNamed(context, element['ruta']);
+      },
     );
     elements..add(widgetTemp)
             ..add(Divider());
